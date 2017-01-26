@@ -15,7 +15,8 @@
         //Sample navigation please use this to navigate using the service
         ic.gotopage = function gotopage(view) {
             navigate.gotopage(view);
-        }
+        };
+
         
     }
 

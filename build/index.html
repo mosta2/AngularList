@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="app">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="Content/main.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet"> 
+</head>
+<body ng-controller="IndexController as ic">
+    <md-content class="md-padding" >
+        <md-nav-bar md-selected-nav-item="currentNavItem"   class="topnav" nav-bar-aria-label="navigation links">
+            <md-nav-item md-nav-click="ic.gotopage('home')" name="page1"><i class="material-icons">home</i><div class="iconbuttontext hide-xs">Home</div></md-nav-item>
+            <md-nav-item md-nav-click="ic.gotopage('list')" name="page2"><i class="material-icons">list</i><div class="iconbuttontext hide-xs">Manage</div></md-nav-item>
+            <md-nav-item md-nav-click="ic.gotopage('addItem')" name="page3"><i class="material-icons">add</i> <div class="iconbuttontext hide-xs">Add Item</div></md-nav-item>
+        </md-nav-bar>
+    </md-content>
+ <div ng-view>
+      
+    </div>
+
+        <script src="Scripts/main.js"></script>
+</body>
+</html>

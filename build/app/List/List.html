@@ -1,0 +1,40 @@
+﻿
+<div class="grid">
+
+    <md-toolbar layout="row" class="md-hue-3">
+        <div class="md-toolbar-tools">
+            <span>List of items</span>
+         
+        </div>
+        <button ng-show="lc.selectedcount>0" ng-click="lc.deleteselected()" class="md-warn md-raised md-hue-1 md-button md-ink-ripple">
+            <i class="material-icons">delete</i><div class="iconbuttontext hide-xs">Delete ({{lc.selectedcount}}) item </div>
+        </button>
+
+        <button ng-click="lc.gotopage('addItem')" class="md-warn md-raised md-hue-1 md-button md-ink-ripple"><i class="material-icons">add</i><div class="iconbuttontext hide-xs">Add Item</div></button>
+
+
+    </md-toolbar>
+
+    <md-content>
+        <md-list flex="">
+
+            <md-list-item class="md-2-line" ng-class="item.selected? 'selected': ''" ng-repeat="item in lc.items | orderBy:'order'">
+                <div class="md-list-item-text">
+                    <h3>{{ item.order }}- {{ item.name }} </h3>
+                    <p>{{ item.description }}</p>
+                    
+                </div>
+                <div layour-align="right"><button ng-click="lc.moveup(item.id);" class=""><i class="material-icons">keyboard_arrow_up</i><span></span></button></div>
+                <div layour-align="right"><button ng-click="lc.movedown(item.id);" class=""><i class="material-icons">keyboard_arrow_down</i><span></span></button></div>
+                <div layour-align="right"><button ng-click="lc.showPrompt(item.id);" class=""><i class="material-icons">edit</i><span></span></button></div>
+
+                <div layour-align="right"><button ng-click="lc.deleteItem(item.id);" class=""><i class="material-icons">delete</i><span></span></button></div>
+                <div ng-show="!item.selected" layour-align="right"><button ng-click="lc.selectItem(item.id);" class=""><i class="material-icons">check</i><span></span></button></div>
+                <div ng-show="item.selected" layour-align="right"><button ng-click="lc.selectItem(item.id);" class=""><i class="material-icons">remove</i><span></span></button></div>
+            </md-list-item>
+            <md-divider></md-divider>
+
+        </md-list>
+    </md-content>
+</div>
+

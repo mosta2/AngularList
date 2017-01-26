@@ -6,6 +6,8 @@
     angular.module('app')
     .factory('dataservice', dataservice);
     
+    dataservice.$inject = ['$q', '$filter', '$mdToast'];
+
     function dataservice($q, $filter, $mdToast) {
         
         var service = {
@@ -28,8 +30,8 @@
 
             var deferred = $q.defer();
             var storage = localStorage.getItem("items");
-            var list = []
-            if (storage.length > 0) {
+            var list = [];
+            if (storage && storage.length > 0) {
                 try {
                     list = JSON.parse(storage);
                 } catch (e) { }
@@ -139,10 +141,10 @@
                 {
                     if(items[i].id  > maxid)
                     {
-                        maxid = items[i].id
+                        maxid = items[i].id;
                     }
                 }
-                id = maxid + 1;;
+                id = maxid + 1;
                 deferred.resolve(id);
             });
             return deferred.promise;

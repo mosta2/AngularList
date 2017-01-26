@@ -6,7 +6,7 @@
         .module('app')
         .config(config);
 
-     
+    config.$inject = ['$routeProvider', '$mdThemingProvider'];
     function config($routeProvider, $mdThemingProvider) {
 
 
@@ -26,7 +26,7 @@
         })
         .when("/home", {
             templateUrl: "/home.html"
-        })
+        });
 
             $mdThemingProvider.theme('dark-grey').backgroundPalette('grey').dark();
             $mdThemingProvider.theme('dark-orange').backgroundPalette('orange').dark();

@@ -4,9 +4,10 @@
 
     angular
         .module('app')
-        .controller('AddItem', ['logger','dataservice','navigate', AddItem]);
+        .controller('AddItem',  AddItem);
 
-   
+    AddItem.$inject = ['logger', 'dataservice', 'navigate'];
+
     function AddItem(logger,dataservice,navigate) {
         var aic = this;
         aic.name = "";
@@ -16,18 +17,18 @@
 
 
         aic.addItem = function () {
-           
+
             dataservice.getNextid().then(function (id) {
                 var nextid = id;
 
-                var newitem = { id: nextid, name: aic.name, description: aic.description, order: aic.order, selected:false }
+                var newitem = { id: nextid, name: aic.name, description: aic.description, order: aic.order, selected: false };
                 logger.success(JSON.stringify(newitem));
                 return dataservice.addItem(newitem).then(function (data) {
 
                     return navigate.gotopage('list');
                 });
             });
-        }
+        };
 
 
 

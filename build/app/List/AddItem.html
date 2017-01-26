@@ -1,0 +1,25 @@
+﻿<div layout="column" layout-padding="" ng-cloak="" class="inputdemoIcons">
+
+    <br>
+    <md-content class="md-no-momentum">
+        <md-input-container class="md-block">
+            <label>Name</label>
+            <input ng-model="aic.name" type="text">
+        </md-input-container>
+
+        <md-input-container md-no-float="" class="md-block">
+            <label>Description</label>
+            <input ng-model="aic.description" placeholder="Description" type="text">
+        </md-input-container>
+
+        <md-input-container class="md-block">
+            <label>Order</label>
+            <input ng-model="aic.order" placeholder="Order" ng-required="true" type="number">
+        </md-input-container>
+
+
+        <button ng-click="aic.addItem()" class="md-warn md-raised md-hue-1 md-button md-ink-ripple"><i class="material-icons">add</i><span>Add Item</span></button>
+
+    </md-content>
+
+</div>
