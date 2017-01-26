@@ -4,3 +4,9 @@ E:\server\opensource\freelance\Freelancercom\sonya\AngularList\AngularList\Angul
 E:\server\opensource\freelance\Freelancercom\sonya\AngularList\AngularList\AngularList\obj\Debug\AngularList.csprojResolveAssemblyReference.cache
 E:\server\opensource\freelance\Freelancercom\sonya\AngularList\AngularList\AngularList\obj\Debug\AngularList.dll
 E:\server\opensource\freelance\Freelancercom\sonya\AngularList\AngularList\AngularList\obj\Debug\AngularList.pdb
+E:\server\opensource\freelance\Freelancercom\Belgium\AngularList\bin\AngularList.dll.config
+E:\server\opensource\freelance\Freelancercom\Belgium\AngularList\bin\AngularList.dll
+E:\server\opensource\freelance\Freelancercom\Belgium\AngularList\bin\AngularList.pdb
+E:\server\opensource\freelance\Freelancercom\Belgium\AngularList\obj\Debug\AngularList.csprojResolveAssemblyReference.cache
+E:\server\opensource\freelance\Freelancercom\Belgium\AngularList\obj\Debug\AngularList.dll
+E:\server\opensource\freelance\Freelancercom\Belgium\AngularList\obj\Debug\AngularList.pdb
