@@ -20,9 +20,9 @@
 
             <md-list-item class="md-2-line" ng-class="item.selected? 'selected': ''" ng-repeat="item in lc.items | orderBy:'order'">
                 <div class="md-list-item-text">
-                    <h3>{{ item.name }}</h3>
+                    <h3>{{ item.order }}- {{ item.name }} </h3>
                     <p>{{ item.description }}</p>
-                    <p>{{ item.order }}</p>
+                    
                 </div>
                 <div layour-align="right"><button ng-click="lc.moveup(item.id);" class=""><i class="material-icons">keyboard_arrow_up</i><span></span></button></div>
                 <div layour-align="right"><button ng-click="lc.movedown(item.id);" class=""><i class="material-icons">keyboard_arrow_down</i><span></span></button></div>

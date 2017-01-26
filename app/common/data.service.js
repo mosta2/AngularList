@@ -6,7 +6,7 @@
     angular.module('app')
     .factory('dataservice', dataservice);
     
-    function dataservice($q,$filter) {
+    function dataservice($q, $filter, $mdToast) {
         
         var service = {
             getItems: getItems,
@@ -52,6 +52,11 @@
             getItems().then(function (data) {
                 items = data;
                 items.push(item);
+                $mdToast.show(
+                  $mdToast.simple()
+                    .textContent('Item Added Successfuly!')
+                    .hideDelay(3000)
+                );
                 saveItems(items);
                 deferred.resolve(items);
                 
@@ -66,8 +71,7 @@
             alert(idx);
             getItems().then(function (data) {
                 items = data;
-                var ind = items.indexOf($filter('filter')(items, { id: idx }, true)[0]);
-                items[ind].order = items[ind].order-1;
+                $filter('filter')(items, { id: idx }, true)[0].order = $filter('filter')(items, { id: idx }, true)[0].order - 1;
                 saveItems(items);
                 deferred.resolve(items);
 
@@ -96,7 +100,13 @@
                 items = data;
                 var ind = items.indexOf($filter('filter')(items, { id: idx }, true)[0]);
                 items.splice(ind, 1);
+
                 saveItems(items);
+                $mdToast.show(
+                  $mdToast.simple()
+                    .textContent('Item Deleted Successfuly!')
+                    .hideDelay(3000)
+                );
                 deferred.resolve(items);
                 
             });
@@ -124,7 +134,15 @@
             var id = -1;
             getItems().then(function (data) {
                 items = data;
-                id = items.length + 1;;
+                var maxid = 0;
+                for (var i = 0; i < items.length; i++)
+                {
+                    if(items[i].id  > maxid)
+                    {
+                        maxid = items[i].id
+                    }
+                }
+                id = maxid + 1;;
                 deferred.resolve(id);
             });
             return deferred.promise;
