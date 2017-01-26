@@ -1,4 +1,4 @@
-﻿// Config define the routs and themes 
+﻿// Config define the routes and themes 
 (function () {
     'use strict';
 
