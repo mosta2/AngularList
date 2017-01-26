@@ -1,0 +1,16 @@
+﻿.grid md-toolbar button {
+    color: #fff;
+    white-space: nowrap;
+}
+.grid md-toolbar button .material-icons {
+    vertical-align: middle;
+}
+.iconbuttontext{
+    white-space: nowrap;
+    display:inline-block;
+    vertical-align:top;
+    margin-left:4px;
+}
+.grid .selected {
+   background-color:orange;
+}
