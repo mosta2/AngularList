@@ -1,4 +1,4 @@
-﻿/* global toastr:false, moment:false */
+﻿// Config define the routs and themes 
 (function () {
     'use strict';
 

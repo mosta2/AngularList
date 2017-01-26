@@ -1,4 +1,5 @@
-﻿(function () {
+﻿// This service for logging app events it should be tied to the data service 
+(function () {
     'use strict';
 
     angular.module('app')
@@ -18,11 +19,11 @@
 
         function error(message) {
             
-            $log.error('Error: ' + message, data);
+            $log.error('Error: ' + message);
         }
 
         function success(message, data, title) {
-            $log.info('Success: ' + message, data);
+            $log.info('Success: ' + message);
         }
     }
 

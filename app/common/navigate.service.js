@@ -1,4 +1,6 @@
-﻿(function () {
+﻿// Use this service for navigation using route config
+
+(function () {
     'use strict';
 
     angular.module('app')

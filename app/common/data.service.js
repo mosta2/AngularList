@@ -1,4 +1,6 @@
-﻿(function () {
+﻿// This service for all database work, it always uses promises, ready to be extended for server side API calls
+//Currently it uses localStorage
+(function () {
     'use strict';
 
     angular.module('app')
