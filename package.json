@@ -1,0 +1,31 @@
+{
+  "name": "angularlist",
+  "version": "1.0.0",
+  "description": "angularlisttutorial",
+  "main": "/app/app.module.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mosta2/AngularListTutorial.git"
+  },
+  "keywords": [
+    "angular",
+    "protorype"
+  ],
+  "author": "mosta2",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mosta2/AngularListTutorial/issues"
+  },
+  "homepage": "https://github.com/mosta2/AngularListTutorial#readme",
+  "dependencies": {
+    "grunt": "^1.0.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-uglify": "^2.0.0"
+  }
+}
