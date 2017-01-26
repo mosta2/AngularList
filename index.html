@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="app">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="../../Content/angular-material.css" />
+    <link rel="stylesheet" href="../../Content/app.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet"> 
+</head>
+<body ng-controller="IndexController as ic">
+    <md-content class="md-padding" >
+        <md-nav-bar md-selected-nav-item="currentNavItem"   class="topnav" nav-bar-aria-label="navigation links">
+            <md-nav-item md-nav-click="ic.gotopage('home')" name="page1"><i class="material-icons">home</i><div class="iconbuttontext hide-xs">Home</div></md-nav-item>
+            <md-nav-item md-nav-click="ic.gotopage('list')" name="page2"><i class="material-icons">list</i><div class="iconbuttontext hide-xs">Manage</div></md-nav-item>
+            <md-nav-item md-nav-click="ic.gotopage('addItem')" name="page3"><i class="material-icons">add</i> <div class="iconbuttontext hide-xs">Add Item</div></md-nav-item>
+        </md-nav-bar>
+    </md-content>
+ <div ng-view>
+      
+    </div>
+        <script src="Scripts/angular.js"></script>
+        <script src="Scripts/angular-route.min.js"></script>
+        <script src="Scripts/angular-animate/angular-animate.min.js"></script>
+        <script src="Scripts/angular-aria/angular-aria.min.js"></script>
+        <script src="Scripts/angular-material/angular-material.min.js"></script>
+        <script src="app/app.module.js"></script>
+        <script src="app/common/app.config.js"></script>
+        <script src="app/common/logger.service.js"></script>
+        <script src="app/common/data.service.js"></script>
+        <script src="app/common/navigate.service.js"></script>
+        <script src="app/index.controller.js"></script>
+        <script src="app/List/List.controller.js"></script>
+        <script src="app/List/addItem.controller.js"></script>
+</body>
+</html>

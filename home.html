@@ -1,0 +1,80 @@
+﻿    <md-content class="md-padding">
+        <md-card md-theme="orange">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Welcome To Angular List Tutorial Documentation</span>
+                    <span class="md-title">Layout, CSS and navigation</span>
+                    <h5 class="md-subhead">
+                        The index.html is the boot page for the app, it loads partial views using routing (ex: this is home.html view) which is the default view
+                      <br />  The menu on the top loads List/Manage View and add-item view.
+                        <br />
+                        You may notice the menu text disappears on small screens.
+                        <br />
+                        The app use angular material and theming configured in app.config.js
+                        <br />
+                        Use app.css to apply custom styles.
+                        <br />                        
+                    </h5>
+                </md-card-title-text>
+            </md-card-title>
+           
+        </md-card>
+
+
+        <md-card md-theme="orange">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Functionality, Code, structure</span>
+                    <h5 class="md-subhead">
+                        App Structure: Applied the guidelines from https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md
+                        <br />
+                        - (Exception: For ControllerAs object I use short code for the controller like "lc" for ListController instead of vm for everything)<br />
+                        - Naming in format feature.type.js<br />
+                        
+                        - Files arranged per feature (ex: List files including managing and adding are under List folder)<br />
+                        - Scripts and vendors are under folder "scripts"<br />
+                        - Static Contents under folder "Content" (use app.css to apply custom css)<br />
+                        - Services/Factories and common files are under folder "common"<br />
+
+                    </h5>
+                    <br />
+                </md-card-title-text>
+            </md-card-title>
+
+        </md-card>
+
+        <md-card md-theme="orange">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Common Services and Factories</span>
+                    <h5 class="md-subhead">
+                        - app.commong.js: Define routing and theming<br />
+                        - data.service.js: handles database savings and getting data.<br />
+                        - Logger.service.js: logs events and errors<br />
+                        - navigate.service.js: handles navigation to another views using routing<br />
+
+                    </h5>
+                    <br />
+                </md-card-title-text>
+            </md-card-title>
+
+        </md-card>
+
+        <md-card md-theme="orange">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Data Service</span>
+                    <h5 class="md-subhead">
+                        - Data Service use localStorage as database<br />
+                        - Data Operation always use promises as if it is dealing with back end database<br />
+                        - All data is array based the object structure is Name/Descriptio/ID/Order<br />
+                        - Order number field is how we change the order of the items <br />
+                        - ID field is unique identifier created when creating new item in the array<br />
+
+                    </h5>
+                    <br />
+                </md-card-title-text>
+            </md-card-title>
+
+        </md-card>
+    </md-content>
