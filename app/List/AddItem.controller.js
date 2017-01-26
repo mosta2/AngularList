@@ -1,5 +1,4 @@
-﻿
-// Wrap Angular components in an Immediately Invoked Function Expression (IIFE)
+﻿// Wrap Angular components in an Immediately Invoked Function Expression (IIFE)
 (function () {
     'use strict';
 
@@ -7,6 +6,7 @@
         .module('app')
         .controller('AddItem', ['logger','dataservice','navigate', AddItem]);
 
+   
     function AddItem(logger,dataservice,navigate) {
         var aic = this;
         aic.name = "";
